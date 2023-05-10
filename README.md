@@ -1,6 +1,11 @@
 # IMCC_sem2
 Assignments repository
 
+---
+## changes
 
-. ~~AIT Lab question1 mathematical calculator
-- AIT Lab question1 mathematical calculator reuploaded
+```diff
+- AIT Lab question1 mathematical calculator rejected
+
++ AIT Lab question1 mathematical calculator done differently
+```
