@@ -1,17 +1,53 @@
-<?php
-	$str = "Mathematical Calculator";
-	$num1 = 83;
-	$num2 = 5;
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+  <body><center>
+    <h1>Basic Calculator</h1>
+    <form method="post" action="Calculator.php">
+      <input type="number" name="num1" placeholder="Enter Number 1"><br><br>
+      <input type="number" name="num2" placeholder="Enter Number 2"><br><br>
+      <select name="operator">
+        <option>-- Select Operation --</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select><br><br>
+      <button type="submit" name="submit">Calculate</button>
+    </form>
 
-	$sum = $num1 + $num2;
-	$diff = $num1 - $num2;
-	$pdt = $num1 * $num2;
-	$div = $num1 / $num2;
+    <?php
+      if(isset($_POST['submit'])) {
+        $num1 = $_POST['num1'];
+        $num2 = $_POST['num2'];
+        $operator = $_POST['operator'];
+        $result = '';
 
-	echo "<h2>".$str."</h2>";
-	echo "<h3>num1 = 83 and num2 = 5";
-	echo "<br><br>Sum of ". $num1 . " and " . $num2 ." = ".$sum;
-	echo "<br />Difference of ". $num1 . " and " . $num2 ." = ".$diff;
-	echo "<br />Product of ". $num1 . " and " . $num2 ." = ".$pdt;
-	echo "<br />Division of ". $num1 . " and " . $num2 ." = ".$div;
-?>
+        switch($operator) {
+          case '+':
+            $result = $num1 + $num2;
+            break;
+          case '-':
+            $result = $num1 - $num2;
+            break;
+          case '*':
+            $result = $num1 * $num2;
+            break;
+          case '/':
+            if ($num2 == 0)
+              $result = 'cant divide by 0';
+            else
+              $result = $num1 / $num2;              
+            break;
+          default:
+            $result = 'Invalid operator';
+        }
+
+        echo '<h2>Result: ' . $result . '</h2>';
+      }
+    ?>
+
+  </body>
+</html>
