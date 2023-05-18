@@ -3,6 +3,6 @@
 line_count = 0
 
 with open("questions.txt") as f:
-    for element in f:
+    for lines in f:
         line_count += 1
 print(line_count)
