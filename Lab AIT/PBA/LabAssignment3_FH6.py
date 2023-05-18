@@ -1,0 +1,8 @@
+# 6. Write Python program to Count number of lines in a text file in Python
+
+line_count = 0
+
+with open("questions.txt") as f:
+    for element in f:
+        line_count += 1
+print(line_count)
