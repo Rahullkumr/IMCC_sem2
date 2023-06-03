@@ -1,3 +1,5 @@
+# Write Python program to merge two files into a third file
+
 with open("file1.txt") as file1:
     f1_content = file1.read()
 
