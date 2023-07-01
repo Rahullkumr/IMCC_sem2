@@ -8,5 +8,4 @@ Assignments repository
 + AIT Lab question1(php) mathematical calculator edited and changed
 + AIT Lab question2(php) edited
 ```
-more assignments coming
 Assignments repository
